@@ -1,6 +1,27 @@
-# FORÇA BRUTA, ALGORITMO MEMÉTICO E VIZINHO MAIS PRÓXIMO APLICADOS AO PROBLEMA DO CAIXEIRO VIAJANTE
-###
-Problemas de otimização são amplamente encontrados no mundo real e envolvem a identificação da melhor solução possível dentro de um conjunto de restrições e critérios. No entanto, muitos desses problemas são difíceis na teoria devido à sua complexidade, sendo classificados como NP-Completos. Um exemplo clássico é o Problema do Caixeiro Viajante (ou "Traveling Salesman Problem"), que busca encontrar o caminho mais curto para um caixeiro viajante visitar um conjunto de cidades e retornar à cidade de origem. Neste relatório, analisamos estratégias alternativas de implementação computacional para melhorar a resolução desse problema. Focamos em dois tipos de algoritmos: a Metaheurística do Algoritmo Genético, transformando-o em um Algoritmo Memético e a Heurística do Vizinho Mais Próximo. Comparamos a eficiência desses métodos em relação à abordagem de Força Bruta, que explora todas as possíveis permutações das cidades para encontrar a solução ótima, mas é computacionalmente inviável para grandes instâncias. A comparação foi realizada utilizando gráficos ilustrativos e análise de dados para validar e comprovar a veracidade dos fatos. Assim, os resultados mostraram que, em particular, a metaheurística demonstrou ser mais viável para problemas de maior escala, destacando a importância de técnicas metaheurísticas híbridas para resolver problemas complexos de otimização de forma prática e eficiente.
-###
-Por Hivison Silva, Igor Queiroz e Yonara Silva
+# 🗺️ Problema do Caixeiro Viajante (TSP): Análise de Algoritmos
+## Força Bruta, Algoritmo Memético e Vizinho Mais Próximo
 
+## 📌 Sobre o Projeto
+Problemas de otimização são amplamente encontrados no mundo real e envolvem a identificação da melhor solução possível dentro de um conjunto de restrições. Muitos desses problemas, como o clássico Problema do Caixeiro Viajante (TSP - Traveling Salesman Problem), são classificados como NP-Completos devido à sua alta complexidade computacional. O objetivo do TSP é encontrar a rota mais curta que permita a um caixeiro visitar um conjunto de cidades exatamente uma vez e retornar à cidade de origem.
+
+Este repositório contém um estudo comparativo e a implementação computacional de três abordagens distintas para resolver o TSP, avaliando a viabilidade, eficiência e escalabilidade de cada método através de análise de dados e gráficos ilustrativos.
+
+## 👥 Autores
+### Pesquisa e desenvolvimento realizados por:
+
+- Hivison Silva
+
+- [Igor Queiroz](https://github.com/IgorBLQ?tab=repositories&q=caix&type=&language=&sort=)
+
+- Yonara Silva
+
+## 🌟 Minha Participação **(Igor Queiroz)**
+Construção da metaheurística base deste projeto (o Algoritmo Genético)
+
+O foco desta etapa foi criar uma base matemática e algorítmica robusta em Python puro, sem a utilização de bibliotecas externas de otimização, comprovando o domínio em estruturas de dados e lógica de programação complexa.
+
+**Principais frentes técnicas desta implementação:**
+* **Ciclo Evolutivo Completo:** Estruturação do fluxo de gerações, englobando população inicial, cálculo de *fitness* (distância Euclidiana), e seleção de sobreviventes com taxa de Elitismo.
+* **Operadores Genéticos Customizados:** Implementação da lógica de seleção por Torneio e Roleta, além do desenvolvimento de algoritmos de cruzamento (Crossover) adaptados para rotas, garantindo que nenhuma cidade fosse visitada duas vezes ou esquecida.
+* **Ordenação de Baixo Nível:** Em vez de utilizar funções nativas de ordenação do Python, foi implementado o algoritmo **Heap Sort** do zero para ranquear a população a cada geração, evidenciando forte conhecimento em complexidade de algoritmos.
+* **Fundação para o Memético:** Toda essa estrutura orientada a funções foi desenhada para ser escalável, servindo como o "motor principal" onde a Busca Local foi posteriormente acoplada para gerar o Algoritmo Memético.
